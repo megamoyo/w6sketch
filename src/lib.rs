@@ -3,7 +3,7 @@ mod minhash;
 use pyo3::prelude::*;
 
 #[pymodule]
-fn w6r(m: &Bound<'_, PyModule>) -> PyResult<()> {
+fn w6sketch(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_class::<minhash::SuperMinHasher>()?;
     m.add_class::<minhash::SuperMinHasherLSH>()?;
     m.add_class::<minhash::LSH>()?;
